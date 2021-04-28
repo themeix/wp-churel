@@ -341,7 +341,7 @@ Kirki::add_field(
 		'label'       => esc_html__('Logo Brand Width(px)', 'churel'),
 		'description'       => esc_html__('You can set your header logo image width', 'churel'),
 		'section'     => 'site_brand',
-		'default'     => 200,
+		'default'     => 180,
 		'choices'     => array(
 			'min'  => 1,
 			'max'  => 275,
@@ -854,7 +854,7 @@ Kirki::add_field(
 	'churel_config',
 	array(
 		'type'        => 'color',
-		'settings'    => 'primary_color',
+		'settings'    => 'churel_primary_color',
 		'label'       => esc_html__('Primary Color', 'churel'),
 		'section'     => 'colors',
 		'priority'    => 1,
@@ -865,7 +865,7 @@ Kirki::add_field(
 	'churel_config',
 	array(
 		'type'        => 'color',
-		'settings'    => 'secondary_color',
+		'settings'    => 'churel_secondary_color',
 		'label'       => esc_html__('Secondary Color', 'churel'),
 		'section'     => 'colors',
 		'priority'    => 2,
@@ -876,7 +876,7 @@ Kirki::add_field(
 	'churel_config',
 	array(
 		'type'        => 'color',
-		'settings'    => 'text_color',
+		'settings'    => 'churel_text_color',
 		'label'       => esc_html__('Text Color', 'churel'),
 		'section'     => 'colors',
 		'priority'    => 3,

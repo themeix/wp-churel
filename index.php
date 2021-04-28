@@ -28,7 +28,7 @@
             <?php
             $layout = '';
             if (class_exists('kirki')) {
-                $layout = get_theme_mod('churel_page_layout', '1');
+                $layout = get_theme_mod('churel_page_layout', '2');
 
                 if ($layout == '3') {
                     get_sidebar();
@@ -36,7 +36,7 @@
             }
             ?>
             <div class="col-lg-<?php if ($layout == '1' && class_exists('kirki')) {
-                                    echo '12 col-md-12 ';
+                                    echo '12 col-md-12 12';
                                 } elseif (!is_active_sidebar('churel-sidebar')) {
                                     echo '12 col-md-12';
                                 } else {

@@ -91,10 +91,9 @@ function churel_register_required_plugins()
             'required' => false,
         ),
         array(
-            'name' => esc_html__('Churel Core', 'churel'),
-            'slug' => 'churel-core',
+            'name' => esc_html__('Social Snap', 'churel'),
+            'slug' => 'socialsnap',
             'required' => false,
-            'source' => 'https://github.com/akashmdiu/plugins-/raw/master/churel-core.zip'
         ),
 
     );

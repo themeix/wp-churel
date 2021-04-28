@@ -4,7 +4,7 @@
          <?php 
             comments_number(esc_html__('0 Comments', 'churel'), esc_html__('1 Comment','churel'), esc_html__('% Comments', 'churel'));
 
-            echo esc_html__('on ', 'churel'); echo esc_html(get_the_title());
+            echo esc_html__(' on ', 'churel'); echo esc_html(get_the_title());
         ?>
         </h4>
         <div class="comments_template">
@@ -17,7 +17,7 @@
 	}
 	else if ( !comments_open() && get_comments_number() ) {?>
      <h4 class="sub-title heading-4 section-title"><?php comments_number(esc_html__('0 Comments', 'churel'), esc_html__('1 Comment','churel'),'%'.esc_html__(' Comments', 'churel')); 
-     echo esc_html__('on ', 'churel'); echo esc_html(get_the_title()); ?></h4>
+     echo esc_html__(' on ', 'churel'); echo esc_html(get_the_title()); ?></h4>
         <div class="comments_template">
         <?php 
            comments_template();
@@ -28,7 +28,7 @@
 	}
 	else if (comments_open() && !get_comments_number() ) {?>
      <h4 class="sub-title heading-4 section-title"><?php comments_number(esc_html__('0 Comments', 'churel'), esc_html__('1 Comment','churel'),'%'.esc_html__(' Comments', 'churel')); 
-     echo esc_html__('on ', 'churel'); echo esc_html(get_the_title()); ?></h4>
+     echo esc_html__(' on ', 'churel'); echo esc_html(get_the_title()); ?></h4>
         <div class="comments_template">
         <?php 
            comments_template();

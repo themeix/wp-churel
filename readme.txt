@@ -2,13 +2,13 @@
 
 Contributors: themeix
 Tags: blog,block-styles, right-sidebar, footer-widgets, sticky-post, theme-options, full-width-template, custom-background, custom-logo, custom-menu, featured-images, flexible-header, threaded-comments, translation-ready
-Requires at least: 5.3
-Tested up to: 5.4.1
+Requires at least: 4.7
+Tested up to: 5.7
 Stable tag: 1.0.3
 Requires PHP: 5.6
 Author URI: https://themeix.com/
 Theme URI: https://themeix.com/product/doxy-responsive-wordpress-theme/
-License: GNU General Public License v2 or later
+License: GPL-2.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
@@ -56,10 +56,25 @@ Fixed Keyboard navigation issues
 Fixed mobile accecibility issues
 Fixed content underline issues
 
+= 1.0.2 =
+Fixed scaping and translation issues
+Fixed prefix issues
+Remove external source plugin 
+Update readme.txt file 
+Fixed Keyboard Navigation issues
+
+= 1.0.3 =
+Fixed menu focus issue
+
+= 1.0.4 =
+Upgrade menu design 
+Added new footer 
+remove unused code 
+Added new widget in footer
 
 == Credits ==
 
-Chure Theme bundles the following third-party resources:
+Churel Theme bundles the following third-party resources:
 
 == Javascript ==
 
@@ -82,30 +97,74 @@ PrismJS 1.16.0
 License : MIT
 License URI: https://opensource.org/licenses/MIT
 
-Lightbox 
+Lightbox v2.10.0
 License : MIT
 License URI: https://opensource.org/licenses/MIT
 
 Superfish 1.7.10 
-License : MIT
-License URI: https://opensource.org/licenses/MIT
+License : MIT, GPLv3
+License URI: https://opensource.org/licenses/MIT, https://www.gnu.org/licenses/license-list.html#GPLv2
 
-== Plugins ==
+Supersubs v0.3b
+License : MIT, GPLv3
+License URI: https://opensource.org/licenses/MIT, https://www.gnu.org/licenses/license-list.html#GPLv2
 
-TGM Plugin Activation
-Source:  http://tgmpluginactivation.com/
-Licenses: GPLv2 or later
+Infinite Scroll PACKAGED v3.0.5
+License: GPLv3
+License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
-Kirki Customizer Framework
-Source: https://kirki.org/
+FitVids 1.1
+License: WTFPL
+License URI: http://sam.zoy.org/wtfpl/
+
+medium-zoom 1.0.4 
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 
-== Image Credit ==
-Page Title Cover Image
-License: CC0 Public Domain
-Source: https://stocksnap.io/photo/colorful-abstract-FGRVJCM51R
+Popper
+License: MIT
+License URI: https://opensource.org/licenses/MIT
 
+PrismJS 1.16.0
+License: MIT
+License URI: https://opensource.org/licenses/MIT
+
+
+== WordPress Plugins ==
+
+TGM Plugin Activation
+Source:  http://tgmpluginactivation.com/
+Licenses: GPL-2.0-or-later
+
+Kirki Customizer Framework
+Source: https://wordpress.org/plugins/kirki/
+License: MIT
+License URI: https://opensource.org/licenses/MIT
+
+Kirki Elementor Page Builder
+Source: https://wordpress.org/plugins/elementor/
+License: GPLv3
+License URI: https://www.gnu.org/licenses/license-list.html#GPLv2
+
+Contact Form 7
+Source: https://wordpress.org/plugins/contact-form-7/
+License: MIT
+License URI: https://www.gnu.org/licenses/license-list.html#GPLv2
+
+Advanced Custom Fields
+Source: https://wordpress.org/plugins/advanced-custom-fields/
+License: GPL-2.0-or-later
+License URI: https://www.gnu.org/licenses/license-list.html#GPLv2
+
+Contact Form 7 Extension For Mailchimp
+Source: https://wordpress.org/plugins/contact-form-7-mailchimp-extension/
+License: GPL-2.0-or-later
+License URI: https://www.gnu.org/licenses/license-list.html#GPLv2
+
+== Image Credit ==
+Image for Page title, Copyright Steve Johnson
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://stocksnap.io/photo/colorful-abstract-FGRVJCM51R
 
 
 All images and icons are licensed under [CC0] [https://creativecommons.org/publicdomain/zero/1.0/]

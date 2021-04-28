@@ -84,17 +84,7 @@
                </div>
             <?php endif; ?>
             <?php get_template_part('template-parts/churel-author-meta'); ?>
-
             
-              
-            <?php  if (class_exists('ThemeixChurelPlugin')) : ?>
-               <div class="social-meta text-center m-b-60">
-               <h5><?php echo esc_html__('Share this post', 'churel'); ?></h5>
-                 <?php echo do_shortcode( '[social_share]'); ?>
-               </div>
-           <?php endif; ?>
-           
-
             <?php if (comments_open() || get_comments_number()) : ?>
                <div class="comments-box m-b-40">
                   <?php get_template_part('template-parts/comments-template'); ?>

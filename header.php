@@ -7,20 +7,17 @@
  *
  * @package WordPress
  * @subpackage Churel
- * @since Churel 1.0
+ * @since Churel 1.0.3
  */
 
 ?>
-<!DOCTYPE html>
 <!DOCTYPE html>
 
 <html class="no-js" <?php language_attributes(); ?>>
 
 <head>
-
    <meta charset="<?php bloginfo('charset'); ?>">
    <meta name="viewport" content="width=device-width, initial-scale=1">
-
    <?php wp_head(); ?>
 </head>
 
@@ -49,7 +46,7 @@
    <header class="header-area ">
       <div class="container">
          <div class="row">
-            <div class="col-lg-3 col-md-12">
+            <div class=" col-lg-3 ">
                <div class="header-logo">
                   <?php if (has_custom_logo()) : ?>
                      <div class="logo"><a href="<?php echo esc_url(home_url()); ?>"><?php the_custom_logo(); ?></a> </div>
@@ -64,9 +61,11 @@
 
                </div>
             </div>
-            <div class="col-lg-9 col-md-12">
+            <div class="col-lg-9 ">
                <div class="themeix-menu">
-                  <button id="hamburger-open"><i class="fa fa-bars"></i> <?php echo esc_html__('Menu', 'churel'); ?></button>
+
+                  <button id="hamburger-open" class="menu-btn"><i class="fa fa-bars"></i> <?php echo esc_html__('Menu', 'churel'); ?></button>
+                  <button id="hamburger-close" class="sf-hidden menu-btn"><i class="fa fa-plus"></i> <?php echo esc_html__('Close', 'churel'); ?></button>
 
                   <?php
                   wp_nav_menu(array(
@@ -78,7 +77,7 @@
 
                   ?>
 
-                  <button id="hamburger-close" class="sf-hidden"><i class="fa fa-plus"></i> <?php echo esc_html__('Close', 'churel'); ?></button>
+
                   <button data-target="#search-modal" class="search-modal" data-toggle="modal"><i class="fas fa-search"></i></button>
                </div>
             </div>

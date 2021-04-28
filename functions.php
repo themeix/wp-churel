@@ -28,10 +28,10 @@ function churel_setup()
 
     // Set the default content width.
     // Set content-width.
- 
-	if ( ! isset( $content_width ) ) {
-		$content_width = 900;
-	}
+
+    if (!isset($content_width)) {
+        $content_width = 900;
+    }
 
     //Support Automatic Feed Links 
     add_theme_support('automatic-feed-links');
@@ -255,7 +255,7 @@ function churel_sidebar()
         'description' =>  esc_html__('Use this sidebar for footer one.', 'churel'),
         'before_title' => '<h5 class="footer-title heading-5">',
         'after_title' => '</h5>',
-        'before_widget' => '<div id="%1$s" class="footer-widget wow fadeIn widget %2$s">',
+        'before_widget' => '<div id="%1$s" class="footer-widget sidebar-widget wow fadeIn widget %2$s">',
         'after_widget' => '</div>'
     ));
     register_sidebar(array(
@@ -264,7 +264,7 @@ function churel_sidebar()
         'description' =>  esc_html__('Use this sidebar for footer two.', 'churel'),
         'before_title' => '<h5 class="footer-title heading-5">',
         'after_title' => '</h5>',
-        'before_widget' => '<div id="%1$s" class="footer-widget wow fadeIn widget %2$s">',
+        'before_widget' => '<div id="%1$s" class="footer-widget sidebar-widget wow fadeIn widget %2$s">',
         'after_widget' => '</div>'
     ));
     register_sidebar(array(
@@ -273,7 +273,7 @@ function churel_sidebar()
         'description' =>  esc_html__('Use this sidebar for footer three.', 'churel'),
         'before_title' => '<h5 class="footer-title heading-5">',
         'after_title' => '</h5>',
-        'before_widget' => '<div id="%1$s" class="footer-widget wow fadeIn widget %2$s">',
+        'before_widget' => '<div id="%1$s" class="footer-widget sidebar-widget wow fadeIn widget %2$s">',
         'after_widget' => '</div>'
     ));
     register_sidebar(array(
@@ -282,7 +282,7 @@ function churel_sidebar()
         'description' =>  esc_html__('Use this sidebar for footer four.', 'churel'),
         'before_title' => '<h5 class="footer-title heading-5">',
         'after_title' => '</h5>',
-        'before_widget' => '<div id="%1$s" class="footer-widget wow fadeIn widget %2$s">',
+        'before_widget' => '<div id="%1$s" class="footer-widget sidebar-widget wow fadeIn widget %2$s">',
         'after_widget' => '</div>'
     ));
 }
@@ -316,7 +316,7 @@ function churel_search_form($form)
 {
     $form = '<form method="get" action="' . home_url('/') . '">
                 <div class="input-group">
-                <input type="search" name="s" value="' . get_search_query() . '" class="form-control" placeholder="' . esc_html__('Search', 'churel') . '">
+                <input type="search" name="s" value="' . get_search_query() . '" class="form-control" placeholder="' . esc_attr__('Search', 'churel') . '">
                 <div class="input-group-prepend">
                     <button type="submit" class="btn"><i class="fa fa-search"></i></button>
                 </div>
@@ -330,7 +330,7 @@ function churel_subscribe_form()
 {
     $form = '<form action="' . home_url('/') . '" method="POST">
         <div class="form-group">
-            <input class="subscribe-email" name="email" placeholder="' . esc_html__('Your Email', 'churel') . '" autocomplete="false">
+            <input class="subscribe-email" name="email" placeholder="' . esc_attr__('Your Email', 'churel') . '" autocomplete="false">
             <button class="button primary" type="submit">
                 ' . esc_html__('Subscribe', 'churel') . '
             </button>

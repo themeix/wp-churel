@@ -3,7 +3,7 @@
 function churel_inline_style()
 {
     wp_enqueue_style(
-        'stylesheet',
+        'churel-stylesheet',
         CHUREL_THEME_URI . '/style.css'
     );
 
@@ -22,9 +22,9 @@ function churel_inline_style()
 
     $custom_css = '
     :root, [data-theme="default"] {
-        --text-color:' . esc_attr(get_theme_mod('text_color', '#383143')) . ';
-        --secondary-color: ' . esc_attr(get_theme_mod('secondary_color', '#333333')) . ';
-        --primary-color: ' . esc_attr(get_theme_mod('primary_color', '#f44336')) . ' ;
+        --churel-text-color:' . esc_attr(get_theme_mod('churel_text_color', '#383143')) . ';
+        --churel-secondary-color: ' . esc_attr(get_theme_mod('churel_secondary_color', '#333333')) . ';
+        --churel-primary-color: ' . esc_attr(get_theme_mod('churel_primary_color', '#f44336')) . ' ;
         }
         .page-title-post{
             background-image: url('.esc_url($bg_image).');
@@ -55,8 +55,15 @@ function churel_inline_style()
         .search-result-title.overlay:before{
             background-color: ' . esc_attr(get_theme_mod('search_result_overlay', '')) . ';
         }
+
+        @media only screen and (max-width: 480px) {
+            .header-logo img {
+              width: 160px!important;
+              max-height: 150px;
+            }
+        }
     ';
 
-    wp_add_inline_style('stylesheet', $custom_css);
+    wp_add_inline_style('churel-inline-stylesheet', $custom_css);
 }
 add_action('wp_enqueue_scripts', 'churel_inline_style');

@@ -25,7 +25,7 @@ if ($churel_count == 1) {
 
             <div class="meta-info">
                <span class="mb-3 d-block">
-                  <?php echo esc_html( $churel_text ); ?>
+                  <?php echo esc_html($churel_text); ?>
                </span>
             </div>
 
@@ -57,6 +57,20 @@ if ($churel_count == 1) {
                </div>
             <?php endwhile; ?>
          <?php endif; ?>
+      </div>
+      <div class="row">
+         <div class="col-md-12">
+            <div class="posts-pagination text-center">
+               <?php
+               the_posts_pagination(array(
+                  'prev_text'    => esc_html('«'),
+                  'next_text'    => esc_html('»'),
+                  'mid_size' => '5',
+                  'screen_reader_text' => ''
+               ));
+               ?>
+            </div>
+         </div>
       </div>
    </div>
 </section>

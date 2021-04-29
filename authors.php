@@ -7,12 +7,20 @@ get_header();
 while (have_posts()) : the_post();
 endwhile;
 
+$bg_img  = '';
+if(get_theme_mod('authors_banner_bg')){
+   $bg_img = get_theme_mod('authors_banner_bg');
+}
+else if(get_the_post_thumbnail_url( )){ 
+   $bg_img = get_the_post_thumbnail_url();
+}
 ?>
+
 
 <!-- banner area -->
 <section class="page-title-area m-b-60">
    <div class="container">
-      <div class="page-title-post authors-title overlay">
+      <div class="page-title-post authors-title overlay" style="background-image:url(<?php echo esc_url($bg_img); ?>);">
          <div class="wrap">
             <h2 class="text-white"><?php the_title(); ?></h2>
             <p>
@@ -39,7 +47,9 @@ endwhile;
       <div class="row authors-variation">
          <?php $churel_users = get_users(['role__in' => ['author', 'administrator']]); ?>
          <?php foreach ($churel_users as $churel_user) : ?>
-            <div class="col-md-6 col-lg-4">
+
+            <?php $layout = get_theme_mod('category_layout_settings', '1'); ?>
+            <div class="col-md-6 col-lg-<?php if($layout == '1'){ echo '4'; }else{ echo '6'; } ?>">
                <div class="author-post">
                   <div class="thumbnail">
                      <?php echo get_avatar($churel_user->ID, 345); ?>
@@ -55,19 +65,11 @@ endwhile;
                            $churel_text =  sprintf('Total %d posts', $churel_count);
                         }
                      ?>
-                     <p><<?php echo esc_html($churel_text); ?></p>
-                     <div class="social">
+                     <p><?php echo esc_html($churel_text); ?></p>
+                     <div class="author-bio">
 
-                        <?php if (get_the_author_meta('facebook', $churel_user->ID)) : ?>
-                           <span><a href="<?php echo esc_url(get_the_author_meta('facebook', $churel_user->ID)); ?>"><i class="fab fa-facebook-f"></i></a></span>
-                        <?php endif; ?>
-
-                        <?php if (get_the_author_meta('twitter', $churel_user->ID)) : ?>
-                           <span><a href="<?php echo esc_url(get_the_author_meta('twitter', $churel_user->ID)); ?>"><i class="fab fa-twitter"></i></a></span>
-                        <?php endif; ?>
-
-                        <?php if (get_the_author_meta('instagram', $churel_user->ID)) : ?>
-                           <span><a href="<?php echo esc_url(get_the_author_meta('instagram', $churel_user->ID)); ?>"><i class="fab fa-instagram"></i></a></span>
+                        <?php if (get_the_author_meta('description', $churel_user->ID)) : ?>
+                           <p> <?php echo esc_html( get_the_author_meta('description', $churel_user->ID) ); ?></p>
                         <?php endif; ?>
 
                      </div>

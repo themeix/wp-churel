@@ -31,7 +31,7 @@
 
                               <a href="<?php echo esc_url(home_url() . '/category/' . $churel_category->slug); ?>"><?php echo  esc_html('#' . $churel_category->name . '  '); ?></a>
 
-                           <?php endforeach; ?>
+                           <?php endforeach; ?> 
 
                         </span>
                      </div>
@@ -48,8 +48,8 @@
                   </div>
 
                   <?php if (has_post_thumbnail()) : ?>
-                     <div class="page-title-area m-b-60">
-                        <div class="page-title-post overlay" style="background-image:url(<?php the_post_thumbnail_url(); ?>);"> </div>
+                     <div class="post-thumb">
+                        <?php the_post_thumbnail(); ?>
                      </div>
                   <?php endif; ?>
 

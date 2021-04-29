@@ -30,6 +30,20 @@ endwhile;
             <?php endwhile; ?>
          <?php endif; ?>
       </div>
+      <div class="row">
+         <div class="col-md-12">
+            <div class="posts-pagination text-center">
+               <?php
+               the_posts_pagination(array(
+                  'prev_text'    => esc_html('«'),
+                  'next_text'    => esc_html('»'),
+                  'mid_size' => '5',
+                  'screen_reader_text' => ''
+               ));
+               ?>
+            </div>
+         </div>
+      </div>
    </div>
 </section>
 <!-- blog area -->

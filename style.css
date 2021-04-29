@@ -3,7 +3,7 @@ Theme Name: Churel
 Text Domain: churel
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Version: 1.0.4
+Version: 1.0.5
 Tested up to: 5.7
 Requires at least: 4.7
 Requires PHP: 5.2.4
@@ -294,7 +294,7 @@ form.wp-block-search {
 }
 
 .posts-pagination.text-center {
-  margin-top: 25px;
+  margin: 25px 0;
 }
 
 .banner-post .thumbnail img {
@@ -330,6 +330,11 @@ form.wp-block-search {
   color: inherit;
 }
 
+.author-bio p {
+  margin: 0!important;
+  padding: 0!important;
+}
+
 .entry-content .blocks-gallery-item {
   float: left;
 }
@@ -337,6 +342,15 @@ form.wp-block-search {
 .row.blog-variation.infinite-scroll .col-lg-12 {
   padding: 0;
 }
+.row.blog-variation .col-lg-6, .row.blog-variation .col-md-12{
+  padding-bottom: 30px;
+}
+.col-lg-6 .blog-post, .col-md-12 .blog-post {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
 
 .entry-content a, p a {
   text-decoration: underline;

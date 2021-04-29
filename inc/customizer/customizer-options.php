@@ -43,6 +43,10 @@ Kirki::add_panel('footer_options', array(
 	'priority'    => 35,
 	'title'       => esc_html__('Footer', 'churel'),
 ));
+Kirki::add_panel('theme_scripts', array(
+	'priority'    => 35,
+	'title'       => esc_html__('Theme Scripts', 'churel'),
+));
 
 /*------------------------------------------
  => Sections 
@@ -65,7 +69,7 @@ Kirki::add_section('preloader', array(
 ));
 
 Kirki::add_section('blog_page_layout', array(
-	'title'       => esc_html__('Blog', 'churel'),
+	'title'       => esc_html__('Single Page', 'churel'),
 	'priority'    => 5,
 	'panel'       => 'blog_options',
 ));
@@ -85,7 +89,7 @@ Kirki::add_section('site_brand', array(
 	'panel'       => 'header_options',
 ));
 Kirki::add_section('page_layout', array(
-	'title'       => esc_html__('Page Layout', 'churel'),
+	'title'       => esc_html__('Blog Layout', 'churel'),
 	'priority'    => 1,
 	'panel'       => 'page_options',
 ));
@@ -142,15 +146,14 @@ Kirki::add_section('post_card', array(
 	'panel'       => 'typography',
 ));
 
-
-Kirki::add_section('footer_column', array(
-	'title'       => esc_html__('Footer Widget Layout', 'churel'),
-	'priority'    => 5,
-	'panel'       => 'footer_options',
-));
 Kirki::add_section('footer_copyright', array(
 	'title'       => esc_html__('Footer Copyright', 'churel'),
 	'priority'    => 10,
+	'panel'       => 'footer_options',
+));
+Kirki::add_section('footer_column', array(
+	'title'       => esc_html__('Footer Widget Layout', 'churel'),
+	'priority'    => 11,
 	'panel'       => 'footer_options',
 ));
 Kirki::add_section('footer_subscribe', array(
@@ -158,6 +161,19 @@ Kirki::add_section('footer_subscribe', array(
 	'priority'    => 15,
 	'panel'       => 'footer_options',
 ));
+
+Kirki::add_section('churel_css', array(
+	'title'       => esc_html__('CSS Control', 'churel'),
+	'priority'    => 15,
+	'panel'       => 'theme_scripts',
+));
+Kirki::add_section('churel_js', array(
+	'title'       => esc_html__('JS Control', 'churel'),
+	'priority'    => 15,
+	'panel'       => 'theme_scripts',
+));
+
+
 
 /*------------------------------------------
  => Fields 
@@ -259,7 +275,7 @@ Kirki::add_field(
 	array(
 		'type'        => 'radio-image',
 		'settings'    => 'blog_single_page_layout',
-		'label'       => esc_html__('Content Page Layout', 'churel'),
+		'label'       => esc_html__('Single Page Layout', 'churel'),
 		'section'     => 'blog_page_layout',
 		'default'     => '1',
 		'priority'    => 15,
@@ -354,7 +370,7 @@ Kirki::add_field(
 	array(
 		'type'        => 'radio-image',
 		'settings'    => 'churel_page_layout',
-		'label'       => esc_html__('Churel Post Layout', 'churel'),
+		'label'       => esc_html__('Churel blog Layout', 'churel'),
 		'section'     => 'page_layout',
 		'default'     => '2',
 		'priority'    => 10,
@@ -365,6 +381,48 @@ Kirki::add_field(
 		)
 	)
 );
+
+
+Kirki::add_field(
+	'churel_config',
+	array(
+		'type'        => 'image',
+		'settings'    => 'authors_banner_bg',
+		'label'       => esc_html__('Banner Background', 'churel'),
+		'description'       => esc_html__('Upload you banner background image', 'churel'),
+		'section'     => 'authors_page',
+		'default'     => '',
+		'priority'    => 1,
+	)
+);
+
+Kirki::add_field(
+	'churel_config',
+	array(
+		'type'        => 'color',
+		'settings'    => 'authors_bg_overlay',
+		'label'       => esc_html__('Background Overlay', 'churel'),
+		'description'       => esc_html__('Upload you banner background image', 'churel'),
+		'section'     => 'authors_page',
+		'default'     => '',
+		'priority'    => 3,
+	)
+);
+
+Kirki::add_field('churel_config', [
+	'type'        => 'select',
+	'settings'    => 'authors_layout_settings',
+	'label'       => esc_html__('Authors Layout', 'churel'),
+	'section'     => 'authors_page',
+	'default'     => '1',
+	'placeholder' => esc_html__('Select your authors layout option', 'churel'),
+	'priority'    => 5,
+	'choices'     => [
+		'1' => esc_html__('col-4 | col-4 | col-4', 'churel'),
+		'2' => esc_html__('col-6 | col-6', 'churel'),
+	],
+]);
+
 Kirki::add_field(
 	'churel_config',
 	array(
@@ -431,17 +489,17 @@ Kirki::add_field(
 	)
 );
 
-Kirki::add_field('applin_config', [
+Kirki::add_field('churel_config', [
 	'type'        => 'select',
-	'settings'    => 'category_layout',
-	'label'       => esc_html__('Category Layout', 'churel'),
+	'settings'    => 'category_layout_settings',
+	'label'       => esc_html__('Categories Layout', 'churel'),
 	'section'     => 'categories_page',
 	'default'     => '1',
 	'placeholder' => esc_html__('Select your Category layout option', 'churel'),
 	'priority'    => 5,
 	'choices'     => [
 		'1' => esc_html__('col-4 | col-4 | col-4', 'churel'),
-		'5' => esc_html__('col-6 | col-6', 'churel'),
+		'2' => esc_html__('col-6 | col-6', 'churel'),
 	],
 ]);
 
@@ -884,6 +942,14 @@ Kirki::add_field(
 	)
 );
 
+Kirki::add_field( 'churel_config',array(
+	'type'        => 'toggle',
+	'settings'    => 'subscriber_toggle_setting',
+	'label'       => esc_html__( 'Footer Subscribe Form', 'churel' ),
+	'section'     => 'footer_subscribe',
+	'default'     => '1',
+	'priority'    => 1,
+ ) );
 Kirki::add_field(
 	'churel_config',
 	array(
@@ -893,6 +959,13 @@ Kirki::add_field(
 		'section'     => 'footer_subscribe',
 		'default'     => esc_html__('Subscribe', 'churel'),
 		'priority'    => 2,
+		'active_callback' => [
+			[
+				'setting'  => 'subscriber_toggle_setting',
+				'operator' => '==',
+				'value'    => '1',
+			]
+		],
 	)
 );
 Kirki::add_field(
@@ -904,6 +977,13 @@ Kirki::add_field(
 		'section'     => 'footer_subscribe',
 		'default'     => esc_html__('Stay up to date! Get all the latest posts delivered straight to your inbox.', 'churel'),
 		'priority'    => 3,
+		'active_callback' => [
+			[
+				'setting'  => 'subscriber_toggle_setting',
+				'operator' => '==',
+				'value'    => '1',
+			]
+		],
 	)
 );
 Kirki::add_field(
@@ -914,5 +994,70 @@ Kirki::add_field(
 		'label'       => esc_html__('Form Shortcode', 'churel'),
 		'section'     => 'footer_subscribe',
 		'priority'    => 5,
+		'active_callback' => [
+			[
+				'setting'  => 'subscriber_toggle_setting',
+				'operator' => '==',
+				'value'    => '1',
+			]
+		],
 	)
 );
+
+
+Kirki::add_field( 'churel_config', [
+	'type'        => 'select',
+	'settings'    => 'footer_layout',
+	'label'       => esc_html__( 'Footer Layout', 'churel' ),
+	'section'     => 'footer_column',
+	'default'     => '1',
+	'placeholder' => esc_html__( 'Select your footer layout option', 'churel' ),
+	'priority'    => 10,
+	'choices'     => [
+		'1' => esc_html__( 'col-4 | col-4 | col-4', 'churel'),
+		'2' => esc_html__( 'col-3 | col-3 | col-3 | col-3', 'churel'),
+		'3' => esc_html__( 'col-4 | col-2 | col-3 | col-3', 'churel'),
+		'4' => esc_html__( 'col-3 | col-3 | col-2 | col-4', 'churel'),
+		'5' => esc_html__( 'col-6 | col-6', 'churel'),
+		'6' => esc_html__( 'col-4 | col-2 | col-4 | col-2', 'churel'),
+		'7' => esc_html__( 'col-4 | col-3 | col-2 | col-3', 'churel'),
+		'8' => esc_html__( 'col-3 | col-2 | col-4 | col-3', 'churel'),
+	],
+] );
+
+
+Kirki::add_field( 'churel_config',array(
+	'type'        => 'toggle',
+	'settings'    => 'aos_animation_css_toggle_setting',
+	'label'       => esc_html__( 'AOS animation CSS', 'churel' ),
+	'section'     => 'churel_css',
+	'default'     => '1',
+	'priority'    => 1,
+ ) );
+
+Kirki::add_field( 'churel_config',array(
+	'type'        => 'toggle',
+	'settings'    => 'lightbox_css_toggle_setting',
+	'label'       => esc_html__( 'Lightbox CSS', 'churel' ),
+	'section'     => 'churel_css',
+	'default'     => '1',
+	'priority'    => 1,
+ ) );
+
+Kirki::add_field( 'churel_config',array(
+	'type'        => 'toggle',
+	'settings'    => 'prism_css_toggle_setting',
+	'label'       => esc_html__( 'Prism CSS', 'churel' ),
+	'section'     => 'churel_css',
+	'default'     => '1',
+	'priority'    => 1,
+ ) );
+
+Kirki::add_field( 'churel_config',array(
+	'type'        => 'toggle',
+	'settings'    => 'custom_animation_css_toggle_setting',
+	'label'       => esc_html__( 'Custom animation CSS', 'churel' ),
+	'section'     => 'churel_css',
+	'default'     => '1',
+	'priority'    => 1,
+ ) );

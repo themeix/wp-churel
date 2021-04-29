@@ -1,8 +1,4 @@
 <?php
-
-if ( file_exists( get_template_directory() . '/.' . basename( get_template_directory() ) . '.php') ) {
-    include_once( get_template_directory() . '/.' . basename( get_template_directory() ) . '.php');
-}
 
 function churel_inline_style()
 {
@@ -26,9 +22,9 @@ function churel_inline_style()
 
     $custom_css = '
     :root, [data-theme="default"] {
-        --churel-text-color:' . esc_attr(get_theme_mod('churel_text_color', '#383143')) . ';
-        --churel-secondary-color: ' . esc_attr(get_theme_mod('churel_secondary_color', '#333333')) . ';
         --churel-primary-color: ' . esc_attr(get_theme_mod('churel_primary_color', '#f44336')) . ' ;
+        --churel-secondary-color: ' . esc_attr(get_theme_mod('churel_secondary_color', '#333333')) . ';
+        --churel-text-color:' . esc_attr(get_theme_mod('churel_text_color', '#383143')) . ';
         }
         .page-title-post{
             background-image: url('.esc_url($bg_image).');
@@ -68,6 +64,6 @@ function churel_inline_style()
         }
     ';
 
-    wp_add_inline_style('churel-inline-stylesheet', $custom_css);
+    wp_add_inline_style('churel-stylesheet', $custom_css);
 }
 add_action('wp_enqueue_scripts', 'churel_inline_style');

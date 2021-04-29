@@ -8,13 +8,21 @@ get_header();
 while (have_posts()) : the_post();
 endwhile;
 
-
+$bg_img  = '';
+if(get_theme_mod('categories_banner_bg')){
+   $bg_img = get_theme_mod('categories_banner_bg');
+}
+else if(get_the_post_thumbnail_url( )){ 
+   $bg_img = get_the_post_thumbnail_url();
+}
 ?>
+
 
 <!-- banner area -->
 <section class="page-title-area m-b-60">
    <div class="container">
-      <div class="page-title-post categories-title overlay">
+      
+      <div class="page-title-post categories-title overlay" style="background-image:url(<?php echo esc_url($bg_img); ?>);">
          <div class="wrap">
             <h2 class="text-white"><?php the_title(); ?></h2>
             <p>
@@ -47,8 +55,8 @@ endwhile;
             }
             
             ?>
-
-            <div class="col-md-6 col-lg-4">
+            <?php $layout = get_theme_mod('category_layout_settings', '1'); ?>
+            <div class="col-md-6 col-lg-<?php if($layout == '1'){ echo '4'; }else{ echo '6'; } ?>">
                <div class="category-post">
                   <div class="desc">
                      <h4><a href="<?php echo esc_url(home_url() . '/category/' . $churel_category->slug); ?>"><?php echo esc_html($churel_category->name); ?></a></h4>
@@ -59,6 +67,7 @@ endwhile;
                   </div>
                </div>
             </div>
+
          <?php endforeach; ?>
       </div>
    </div>

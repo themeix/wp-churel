@@ -1,0 +1,71 @@
+// Global Functions
+
+
+// Font Size
+
+
+@mixin font-size($font-size-base) {
+  font-size: ($font-size-base * 10) + px;
+}
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}  
+}
+
+@mixin selection {
+  :-moz-selection           {@content}
+  ::-moz-selection          {@content}
+  ::selection               {@content}  
+}
+
+
+// Section Spacing
+
+@each $space in $sectionspace{
+  @each $sides2 in $sides2 {
+    .p-#{str-slice($sides2, 0, 1)}-#{$space} {
+      padding-#{$sides2}: #{$space}px;
+    }
+  
+  }
+}
+// Inner Spacing
+
+@each $space in $innerspace{
+  @each $side in $sides {
+    .m-#{str-slice($side, 0, 1)}-#{$space} {
+      margin-#{$side}: #{$space}px;
+    }
+  
+  }
+}
+
+
+// Responsive Layout
+
+@mixin desktop {
+  @media (min-width: #{$laptop-device}) and (max-width: #{$desktop-device}) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: #{$tablet-device}) and (max-width: #{$laptop-device}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$tablet-device}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile-device}) {
+    @content;
+  }
+}

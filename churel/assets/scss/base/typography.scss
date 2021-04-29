@@ -1,0 +1,141 @@
+// Global Typography
+body {
+  font-family: $font-family-base; 
+  @include font-size($font-size-base);
+  line-height: $line-height-base;
+  font-weight: $font-weight-normal;
+  color:$text-color; 
+  background:$dark-color;
+}
+ 
+input[type='text'],
+input[type='tel'],
+input[type='email'],
+input[type='search'], 
+input[type='password'], 
+textarea[class],select {
+	padding: 15px;
+	transition:$transition-base;
+	border: $border;
+	background-color: $grey-color;
+	color:$text-color;
+	border-radius: $box-radius;
+}
+.btn,button,
+input[type='button'],
+input[type='reset'],
+input[type='file'],
+input[type='submit'] {
+  transition:$transition-base;
+  padding: 15px 40px;
+  border: 0;
+  border-radius:$box-radius;
+  background-color: $primary-color;
+  color: $light-color;
+  
+  &:hover{
+     background-color:$primary-color;
+  }
+}
+a {
+color:$primary-color;
+&:hover{
+ 
+color:text-color; 
+ 
+}
+}
+
+// Heading Font
+
+h1, h2, h3, h4, h5, h6{
+  font-family: $headings-font-family;
+  line-height:$headings-line-height;
+  font-weight: $font-weight-normal;
+} 
+h1 a, h2 a , h3 a , h4 a, h5 a, h6 a{
+  transition:$transition-base;
+  &:hover{
+      color:$primary-color;
+
+  }
+}
+h1, h2, h3, h4, h5, h6, 
+h1 a, h2 a , h3 a , h4 a, h5 a, h6 a {
+  color:$secondary-color;
+}
+h1, .heading-1 { @include font-size($h1-font-size); 
+}
+h2, .heading-2 { @include font-size($h2-font-size); 
+}
+h3, .heading-3 { @include font-size($h3-font-size); 
+}
+h4, .heading-4 { @include font-size($h4-font-size); 
+}
+h5, .heading-5 { @include font-size($h5-font-size);
+}
+h6, .heading-6 { @include font-size($h6-font-size);
+}
+
+.big-font1{ @include font-size($big-font1); }
+.big-font2{ @include font-size($big-font2); }
+.big-font3{ @include font-size($big-font3); }
+
+// Small Font
+
+small,
+.small {
+  font-weight: $font-weight-normal;
+}
+
+// Font Weight
+
+.font-weight-bold{
+   font-weight:$font-weight-bold !important;
+}
+.weight-semibold{
+   font-weight:$font-weight-semi !important;
+}
+.weight-medium{
+   font-weight:$font-weight-medium !important;
+}
+.weight-normal{
+   font-weight:$font-weight-normal !important;
+}
+.weight-light{ 
+   font-weight:$font-weight-light !important;
+}
+
+
+// Full Color
+
+
+.white-all{
+   h1,h2,h3,h4,h5,h6,p,a,span,label,input,textarea,em,b,*{
+     color:$light-color !important;
+   }
+}
+.white-text{
+     color:$dark-color !important;
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

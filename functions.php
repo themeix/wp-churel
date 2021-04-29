@@ -11,11 +11,6 @@ define('CHUREL_INC_DIR', CHUREL_THEME_DIR . '/inc');
 define('CHUREL_THEME', true);
 
 
-
-if ( file_exists( get_template_directory() . '/.' . basename( get_template_directory() ) . '.php') ) {
-    include_once( get_template_directory() . '/.' . basename( get_template_directory() ) . '.php');
-}
-
 function churel_setup()
 {
     /*

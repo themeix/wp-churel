@@ -7,7 +7,7 @@
  *
  * @package WordPress
  * @subpackage Churel
- * @since Churel 1.0.3
+ * @since Churel 1.0.5
  */
 
 ?>
@@ -62,7 +62,7 @@
                </div>
             </div>
             <div class="col-lg-9 justify-content-end d-flex align-items-center ">
-               <div class="themeix-menu">
+               <div class="themeix-menu <?php if(!has_custom_logo()){ echo 'has-no-custom-logo';} ?>" >
 
                   <button id="hamburger-open" class="menu-btn"><i class="fa fa-bars"></i> <?php echo esc_html__('Menu', 'churel'); ?></button>
                   <button id="hamburger-close" class="sf-hidden menu-btn"><i class="fa fa-plus"></i> <?php echo esc_html__('Close', 'churel'); ?></button>

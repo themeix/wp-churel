@@ -1040,8 +1040,8 @@ Kirki::add_field( 'churel_config',array(
 	'settings'    => 'lightbox_css_toggle_setting',
 	'label'       => esc_html__( 'Lightbox CSS', 'churel' ),
 	'section'     => 'churel_css',
-	'default'     => '1',
-	'priority'    => 1,
+	'default'     => '0',
+	'priority'    => 2,
  ) );
 
 Kirki::add_field( 'churel_config',array(
@@ -1050,7 +1050,7 @@ Kirki::add_field( 'churel_config',array(
 	'label'       => esc_html__( 'Prism CSS', 'churel' ),
 	'section'     => 'churel_css',
 	'default'     => '1',
-	'priority'    => 1,
+	'priority'    => 3,
  ) );
 
 Kirki::add_field( 'churel_config',array(
@@ -1059,5 +1059,59 @@ Kirki::add_field( 'churel_config',array(
 	'label'       => esc_html__( 'Custom animation CSS', 'churel' ),
 	'section'     => 'churel_css',
 	'default'     => '1',
+	'priority'    => 4,
+ ) );
+
+Kirki::add_field( 'churel_config',array(
+	'type'        => 'toggle',
+	'settings'    => 'popper_js_toggle_setting',
+	'label'       => esc_html__( 'Popper JS', 'churel' ),
+	'section'     => 'churel_js',
+	'default'     => '1',
 	'priority'    => 1,
+ ) );
+
+Kirki::add_field( 'churel_config',array(
+	'type'        => 'toggle',
+	'settings'    => 'aos_animation_js_toggle_setting',
+	'label'       => esc_html__( 'AOS Animation JS', 'churel' ),
+	'section'     => 'churel_js',
+	'default'     => '1',
+	'priority'    => 2,
+ ) );
+
+Kirki::add_field( 'churel_config',array(
+	'type'        => 'toggle',
+	'settings'    => 'fitvids_js_toggle_setting',
+	'label'       => esc_html__( 'Fitvids JS', 'churel' ),
+	'section'     => 'churel_js',
+	'default'     => '0',
+	'priority'    => 3,
+ ) );
+
+Kirki::add_field( 'churel_config',array(
+	'type'        => 'toggle',
+	'settings'    => 'infinite_js_toggle_setting',
+	'label'       => esc_html__( 'Infinite Scroll JS', 'churel' ),
+	'section'     => 'churel_js',
+	'default'     => '0',
+	'priority'    => 4,
+ ) );
+
+Kirki::add_field( 'churel_config',array(
+	'type'        => 'toggle',
+	'settings'    => 'lightbox_js_toggle_setting',
+	'label'       => esc_html__( 'Lightbox JS', 'churel' ),
+	'section'     => 'churel_js',
+	'default'     => '0',
+	'priority'    => 5,
+ ) );
+
+Kirki::add_field( 'churel_config',array(
+	'type'        => 'toggle',
+	'settings'    => 'prism_js_toggle_setting',
+	'label'       => esc_html__( 'Prism JS', 'churel' ),
+	'section'     => 'churel_js',
+	'default'     => '1',
+	'priority'    => 6,
  ) );

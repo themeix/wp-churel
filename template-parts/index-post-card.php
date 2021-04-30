@@ -2,7 +2,7 @@
     <div class="blog-wrap">
         <?php
         $churel_category = get_the_category();
-        if ($churel_category[0]) {
+        if ($churel_category) {
             echo '<a class="feature-btn" href="' . esc_url(get_category_link($churel_category[0]->term_id)) . '">' . esc_html($churel_category[0]->cat_name) . '</a>';
         }
         ?>

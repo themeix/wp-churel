@@ -11,6 +11,7 @@ define('CHUREL_INC_DIR', CHUREL_THEME_DIR . '/inc');
 define('CHUREL_THEME', true);
 
 
+
 function churel_setup()
 {
     /*

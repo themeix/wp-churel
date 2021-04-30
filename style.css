@@ -342,15 +342,16 @@ form.wp-block-search {
 .row.blog-variation.infinite-scroll .col-lg-12 {
   padding: 0;
 }
-.row.blog-variation .col-lg-6, .row.blog-variation .col-md-12{
+
+.row.blog-variation .col-lg-6, .row.blog-variation .col-md-12 {
   padding-bottom: 30px;
 }
+
 .col-lg-6 .blog-post, .col-md-12 .blog-post {
   height: 100%;
   display: flex;
   align-items: center;
 }
-
 
 .entry-content a, p a {
   text-decoration: underline;
@@ -394,14 +395,16 @@ a.skip-link.screen-reader-text:focus {
   color: var(--light-color)!important;
   border: none;
 }
+
 .sf-menu ul li a:hover {
   background: var(--light-color)!important;
   padding: 6px 20px!important;
   color: var(--primary-color)!important;
   border: none;
 }
+
 .themeix-menu #main-menu li {
-  margin:  0;
+  margin: 0;
 }
 
 .themeix-menu #main-menu li>a {
@@ -535,10 +538,7 @@ button#hamburger-close .fa, #hamburger-close--2 .fa {
   h1.site-title {
     font-size: 30px;
   }
-  p.site-description {
-    font-size: 14px;
-    margin: 0;
-  }
+ 
   section.banner-area.m-b-60 {
     margin: 0;
   }
@@ -560,6 +560,9 @@ button#hamburger-close .fa, #hamburger-close--2 .fa {
     margin-top: -35px;
     margin-bottom: 40px;
   }
+  .themeix-menu.has-no-custom-logo button {
+    top: -60px;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -572,5 +575,8 @@ button#hamburger-close .fa, #hamburger-close--2 .fa {
   }
   .themeix-menu .search-modal {
     top: -45px;
+  }
+  .themeix-menu.has-no-custom-logo button {
+    top: -60px;
   }
 }

@@ -40,6 +40,11 @@ function churel_inline_style()
             max-height: 150px;
             height: auto;
         }
+        p.site-description {
+            font-size: 14px;
+            margin: 0;
+          }
+          
         .authors-title.overlay:before{
             background-color: ' . esc_attr(get_theme_mod('authors_bg_overlay', '')) . ';
         }

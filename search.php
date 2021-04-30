@@ -40,7 +40,7 @@ if ($churel_count == 1) {
             <?php if (have_posts()) : ?>
                 <?php while (have_posts()) : the_post(); ?>
                     <div class="col-lg-6">
-                        <?php get_template_part('template-parts/post-card'); ?>
+                        <?php get_template_part('template-parts/index-post-card'); ?>
                     </div>
                 <?php endwhile; ?>
             <?php endif; ?>

@@ -146,7 +146,7 @@ p img {
 
 form.post-password-form input[type=submit] {
   border: none;
-  background: var(--primary-color);
+  background: var(--churel-primary-color);
   color: white;
   cursor: pointer;
   border-radius: 2px;
@@ -234,7 +234,7 @@ figure .size-full {
 }
 
 .wp-block-button__link {
-  background-color: var(--primary-color);
+  background-color: var(--churel-primary-color);
   color: var(--white) !important;
 }
 
@@ -321,7 +321,7 @@ form.wp-block-search {
 }
 
 .tags-meta ul li a {
-  background-color: var(--primary-color);
+  background-color: var(--churel-primary-color);
   margin-bottom: 8px;
   border-radius: 5px;
 }
@@ -382,7 +382,7 @@ a.skip-link.screen-reader-text:focus {
 
 .sf-menu ul {
   padding: 0;
-  background: transparent!important;
+  background: var(--churel-primary-color)!important;
 }
 
 .sf-menu ul ul {
@@ -390,7 +390,7 @@ a.skip-link.screen-reader-text:focus {
 }
 
 .sf-menu ul li a {
-  background: var(--primary-color)!important;
+  background: var(--churel-primary-color)!important;
   padding: 6px 20px!important;
   color: var(--light-color)!important;
   border: none;
@@ -399,7 +399,7 @@ a.skip-link.screen-reader-text:focus {
 .sf-menu ul li a:hover {
   background: var(--light-color)!important;
   padding: 6px 20px!important;
-  color: var(--primary-color)!important;
+  color: var(--churel-primary-color)!important;
   border: none;
 }
 
@@ -419,7 +419,7 @@ a.skip-link.screen-reader-text:focus {
 }
 
 .sf-arrows>li>.sf-with-ul:focus:after, .sf-arrows>li:hover>.sf-with-ul:after, .sf-arrows>.sfHover>.sf-with-ul:after {
-  border-top-color: var(--primary-color);
+  border-top-color: var(--churel-primary-color);
 }
 
 .themeix-menu #main-menu {
@@ -518,7 +518,7 @@ button#hamburger-close .fa, #hamburger-close--2 .fa {
     padding: 5px;
   }
   .themeix-menu .search-modal:hover {
-    color: var(--primary-color);
+    color: var(--churel-primary-color);
   }
   .menu-btn, .menu-btn:hover {
     background: transparent;

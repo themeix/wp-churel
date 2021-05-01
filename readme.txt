@@ -84,6 +84,10 @@ Add show or hide footer subscibe section
 fixed categories and authors template featured image
 Add JS and CSS controlling 
 
+= 1.0.6 =
+Remove Unnecessary CSS, JS file 
+Improve visual design
+
 == Credits ==
 
 Churel Theme bundles the following third-party resources:

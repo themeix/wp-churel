@@ -1649,6 +1649,7 @@ small, .small {
 .blog-post .blog-wrap {
   position: relative;
   z-index: 2;
+  width: 100%;
 }
 
 .blog-post .feature-btn {
@@ -2311,7 +2312,7 @@ small, .small {
 
 .new_footer_area .footer_bottom {
   padding-top: 5px;
-  padding-bottom: 50px;
+  padding: 40px 0;
 }
 
 .footer_bottom {

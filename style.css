@@ -3,7 +3,7 @@ Theme Name: Churel
 Text Domain: churel
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Version: 1.0.5
+Version: 1.0.6
 Tested up to: 5.7
 Requires at least: 4.7
 Requires PHP: 5.2.4
@@ -408,7 +408,11 @@ a.skip-link.screen-reader-text:focus {
 }
 
 .themeix-menu #main-menu li>a {
-  padding: 12px 20px;
+  padding: 12px 20px!important;
+}
+
+.themeix-menu #main-menu>li:last-child a {
+  color: var(--churel-primary-color);
 }
 
 .themeix-menu #main-menu li .sub-toggle {
@@ -512,7 +516,7 @@ button#hamburger-close .fa, #hamburger-close--2 .fa {
     color: inherit;
     background: transparent;
     position: absolute;
-    top: -40px;
+    top: -50px;
     right: 0;
     margin-right: 15px;
     padding: 5px;
@@ -528,7 +532,7 @@ button#hamburger-close .fa, #hamburger-close--2 .fa {
     float: right;
     position: absolute;
     right: 70px;
-    top: -40px;
+    top: -50px;
   }
   /* .header-area .col-md-9 {
     width: 50%;
@@ -538,7 +542,9 @@ button#hamburger-close .fa, #hamburger-close--2 .fa {
   h1.site-title {
     font-size: 30px;
   }
- 
+  #content .entry-title {
+    margin-top: 35px;
+  }
   section.banner-area.m-b-60 {
     margin: 0;
   }

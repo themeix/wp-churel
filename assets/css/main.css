@@ -4075,3 +4075,20 @@ pre.wp-block-preformatted {
 .meta-info .fa {
   margin-right: 5px;
 }
+h1.site-title {
+    max-width: 181px;
+    float: left;
+    clear: both;
+}
+
+p.site-description {
+    width: 100%;
+    float: left;
+    padding-bottom: 20px;
+}
+
+.themeix-menu.has-no-custom-logo {
+    top: -70px;
+    position: absolute;
+    right: -8px;
+}

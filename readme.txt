@@ -4,7 +4,7 @@ Contributors: themeix
 Tags: blog,block-styles, right-sidebar, footer-widgets, sticky-post, theme-options, full-width-template, custom-background, custom-logo, custom-menu, featured-images, flexible-header, threaded-comments, translation-ready
 Requires at least: 4.7
 Tested up to: 5.7
-Stable tag: 1.0.5
+Stable tag: 1.0.7
 Requires PHP: 5.6
 Author URI: https://themeix.com/
 Theme URI: https://themeix.com/product/churel-wordpress-multiperpose-theme/
@@ -87,6 +87,10 @@ Add JS and CSS controlling
 = 1.0.6 =
 Remove Unnecessary CSS, JS file 
 Improve visual design
+
+= 1.0.7 =
+Fix mobile responsive issue for mobile ( Specially iphone )
+
 
 == Credits ==
 

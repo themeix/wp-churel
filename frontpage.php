@@ -13,6 +13,7 @@ get_header(); ?>
          <?php
          $churel_query = new WP_Query(array(
             'post-type' => 'post',
+            'posts_per_page' => '10',
             'order' => "DSC"
          ));
          ?>
